@@ -55,7 +55,7 @@ app.get('/weather', (req, res) => {
         error
       });
     } else {
-      forecast(longitude, latitude, (error, { summary, temperature, precipProbability }) => {
+      forecast(longitude, latitude, (error, { summary, temperature, precipProbability,temperatureHigh,temperatureLow}={}) => {
         if (error) {
           res.send({ error });
         } else {
@@ -64,6 +64,8 @@ app.get('/weather', (req, res) => {
             summary,
             temperature,
             precipProbability,
+            temperatureHigh,
+            temperatureLow,
             address
           });
         }

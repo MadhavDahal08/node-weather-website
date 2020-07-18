@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (event) => {
         return messageOne.textContent = data.error;
       }
       messageOne.textContent = data.location;
-      messageTwo.textContent =`${data.summary} It is currently ${data.temperature} degree out. there is ${data.precipProbability}%  chance of rain`;
+      messageTwo.textContent = `${data.summary} It is currently ${data.temperature} degree out. there is ${data.precipProbability}%  chance of rain.The heighest and Lowest temperature of the day is ${data.temperatureHigh} and ${data.temperatureLow} .`;
     });
   });
 });
